@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "autosize": "^6.0.1",
     "chart.js": "^2.9.4",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.10.0",
@@ -13,7 +14,7 @@
     "react-scripts": "3.4.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

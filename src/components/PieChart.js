@@ -5,7 +5,7 @@ import Homepage from './Homepage'
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
-const BarChart = (props) => {
+const PieChart = (props) => {
   let suck = [];
   let temp = [];
   let tempString = props.name[1];
@@ -28,7 +28,7 @@ const BarChart = (props) => {
   return (
     <div>
       
-      <Bar
+      <Pie
         data={{
           labels: suck,
           datasets: [
@@ -87,4 +87,4 @@ const BarChart = (props) => {
   )
 }
 
-export default BarChart
+export default PieChart

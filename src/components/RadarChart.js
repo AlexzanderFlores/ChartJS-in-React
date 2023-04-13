@@ -1,11 +1,11 @@
 import React from 'react'
-import { Pie, Bar, Line, defaults } from 'react-chartjs-2'
+import { Pie, Bar, Line, defaults, Radar } from 'react-chartjs-2'
 import Homepage from './Homepage'
 
 defaults.global.tooltips.enabled = false
 defaults.global.legend.position = 'bottom'
 
-const BarChart = (props) => {
+const RadarChart = (props) => {
   let suck = [];
   let temp = [];
   let tempString = props.name[1];
@@ -28,7 +28,7 @@ const BarChart = (props) => {
   return (
     <div>
       
-      <Bar
+      <Radar
         data={{
           labels: suck,
           datasets: [
@@ -87,4 +87,4 @@ const BarChart = (props) => {
   )
 }
 
-export default BarChart
+export default RadarChart
