@@ -16,10 +16,12 @@ const RadarChart = (props) => {
     let newString = mars[i].replace('(', '');
     newString = newString.replace(')','');
     const splitString = newString.split(',');
-    suck.push(splitString[0]);
-    let newTemp = splitString[1].replace(' ','');
-   
-    temp.push(parseInt(newTemp));
+    if(splitString[1] !== undefined && splitString[0] !== undefined){
+        suck.push(splitString[0]);
+        let newTemp = splitString[1].replace(' ','');
+       
+        temp.push(parseInt(newTemp));
+        }
   }
 
 }
