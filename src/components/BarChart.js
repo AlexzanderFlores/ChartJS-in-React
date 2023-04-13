@@ -1,5 +1,5 @@
 import React from 'react'
-import { Pie, Bar, Line, defaults } from 'react-chartjs-2'
+import {  Bar, Line, defaults } from 'react-chartjs-2'
 import Homepage from './Homepage'
 
 defaults.global.tooltips.enabled = false

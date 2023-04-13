@@ -16,6 +16,11 @@ export const Homepage = () => {
     const [title, setTitle] = useState (" ");
     const [newMess, setNew] = useState([ ]);
     const [updated, setUpdated] = useState(message);
+    const [selectValue, setSelectValue] = React.useState("");
+  const onChange = (event) => {
+    const value = event.target.value;
+    setSelectValue(value);
+  };
   
     const handleChange = (event) => {
       setMessage(event.target.value);
@@ -71,12 +76,22 @@ export const Homepage = () => {
       </form>
       
       <button style={{ width: "100px", height: "50px", }} onClick={handleClick} >Submit</button>
+      <h5><select onChange={onChange}>
+        <option defaultValue>
+          Select Graph
+        </option>
+        <option value="BarChart">Bar Chart</option>
+        <option value="LineChart">Line Chart</option>
+        <option value="PieChart">Pie Chart</option>
+        <option value="RadarChart">Radar Chart</option>
+      </select></h5>
           </ul>
-          <BarChart name={newMess} />
-          <LineChart name={newMess} />
-          <PieChart name={newMess} />
-          <RadarChart name={newMess} />
           
+      {(selectValue==="BarChart") && <BarChart name={newMess}/>}
+      {(selectValue==="LineChart") && <LineChart name={newMess}/>}
+      {(selectValue==="PieChart") && <PieChart name={newMess}/>}
+      {(selectValue==="RadarChart") && <RadarChart name={newMess}/>}
+    
         </div>
         
       );
